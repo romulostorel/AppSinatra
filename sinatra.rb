@@ -39,8 +39,8 @@ post '/product/create' do
   redirect("/")
 end
 
-delete '/product/:id' do
-  c = Product.find(params[:id])
+delete '/product/:id' do |id|
+  c = Product.get(id)
   c.destroy
   redirect "/"
 end

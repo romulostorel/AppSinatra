@@ -8,7 +8,7 @@
         %td= c.name
         %td= c.status
         %td
-          %form(action="/product/#{c.id}" method="DELETE")
+          %form(action="/product/#{c.id}" method="POST")
             %input(type="hidden" name="_method" value="DELETE")
             %input(type="submit" value="Delete")
   
